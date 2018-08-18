@@ -126,6 +126,7 @@ namespace Taller3_Gmap
             if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtLatitud.Text) && !string.IsNullOrEmpty(txtLong.Text))
             { 
             dt.Rows.Add(txtNombre.Text, txtLatitud.Text, txtLong.Text);
+               
             }
         }
 
