@@ -93,12 +93,12 @@ namespace Taller3_Gmap
             filaSeleccionada = e.RowIndex; //fila selecionada
 
             //tomamos datos del grid y los asignamos a los textBox
-            lblNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
-            labLat.Text= dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
-            labLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
+            txtNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
+            txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
+            txtLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
 
             //Se asignan los valores del grid al marcador
-            marker.Position = new PointLatLng(Convert.ToDouble(labLat.Text), Convert.ToDouble(labLong.Text));
+            marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLong.Text));
             //El mapa se posiiona en la ubicación del marcador
             gMapControl1.Position = marker.Position;
             gMapControl1.Zoom = 9;
