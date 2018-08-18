@@ -99,6 +99,7 @@ namespace Taller3_Gmap
 
             //Se asignan los valores del grid al marcador
             marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLong.Text));
+            
             //El mapa se posiiona en la ubicación del marcador
             gMapControl1.Position = marker.Position;
             gMapControl1.Zoom = 9;
