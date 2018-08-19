@@ -44,7 +44,6 @@ C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_
 C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.GmapForm.resources
 C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.InfoForm.resources
 C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.Properties.Resources.resources
-C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.Reportes.resources
 C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csproj.GenerateResource.cache
 C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csproj.CoreCompileInputs.cache
 C:\Users\10\source\repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csproj.CopyComplete
@@ -68,3 +67,4 @@ C:\Users\ES1-411-P960\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debu
 C:\Users\ES1-411-P960\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.exe
 C:\Users\ES1-411-P960\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.pdb
 C:\Users\ES1-411-P960\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.ReportesForm.resources
+C:\Users\10\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.ReportesForm.resources
