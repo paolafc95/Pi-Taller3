@@ -12,20 +12,30 @@ namespace Taller3_Gmap
 {
     public partial class InfoForm : Form
     {
-        public InfoForm()
+        DataTable dt;
+        int posBuscada;
+        GmapForm GMF;
+        public InfoForm(GmapForm gm,DataTable datos, int pos)
         {
+            dt = datos;
+            posBuscada = pos;
+            GMF = gm;
             InitializeComponent();
         }
 
         private void InfoForm_Load(object sender, EventArgs e)
         {
-            
+            dataGridView1.DataSource = dt;
+            dataGridView1.Rows[0].Selected = false;
+            dataGridView1.Rows[posBuscada].Selected = true;
+            dataGridView1.CurrentCell = dataGridView1.Rows[posBuscada].Cells[0];
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            GmapForm formGmap = new GmapForm();
-            formGmap.Show();
+            
+            GMF.Show();
             this.Close();
         }
     }
