@@ -11,7 +11,7 @@ namespace Taller3_Gmap
         public String temp = "";
         public String temp2 = "";
         public int[] posDatos = { 3, 2, 4, 6, 5, 8, 11, 12 };
-        private List<String> grupos { get; set; } = new List<String>();
+        private List<String> grupos  = new List<String>();
         public Modelo()
         {
             cargarDatos();
@@ -91,6 +91,10 @@ namespace Taller3_Gmap
                 string temp2 = "";
                 System.IO.File.WriteAllText(@"./Archivo2", temp2);
             }
+        }
+        public List<String> getListaGrupos()
+        {
+            return grupos;
         }
     }
 }

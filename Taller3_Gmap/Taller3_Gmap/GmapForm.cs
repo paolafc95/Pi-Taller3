@@ -52,7 +52,7 @@ namespace Taller3_Gmap
         private void Form1_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Código", typeof(Int32)));
+            dt.Columns.Add(new DataColumn("Código", typeof(string)));
             dt.Columns.Add(new DataColumn("Nombre",typeof(string)));
             dt.Columns.Add(new DataColumn("Fecha Creación",typeof(string)));
             dt.Columns.Add(new DataColumn("Departamento",typeof(string)));
@@ -65,6 +65,18 @@ namespace Taller3_Gmap
 
 
             //Datos al dt para mostrar en la lista
+
+
+            foreach (var g in model.getListaGrupos())
+            {
+                String[] dats = g.Split(',');
+                if (!dats[0].Equals("COD_GRUPO_GR"))
+                { 
+                    dt.Rows.Add(dats[0], dats[1], dats[2], dats[3], dats[4], dats[5], dats[6], dats[7]);
+                }
+            }
+
+            /*
             dt.Rows.Add(001,"Grupo 1", LatitudInicial, LongitudInicial);
             dt.Rows.Add(002, "Grupo 2", LatitudInicial, LongitudInicial);
             dt.Rows.Add(003, "Grupo 3", LatitudInicial, LongitudInicial);
@@ -73,7 +85,7 @@ namespace Taller3_Gmap
             dt.Rows.Add(006, "Grupo 6", LatitudInicial, LongitudInicial);
             dt.Rows.Add(007, "Grupo 7", LatitudInicial, LongitudInicial);
             dt.Rows.Add(008, "Grupo 8", LatitudInicial, LongitudInicial);
-
+            */
 
             dataGridView1.DataSource = dt;
 
