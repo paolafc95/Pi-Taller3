@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace Taller3_Gmap
 {
-    public partial class InfoForm : Form
+    public partial class Reportes : Form
     {
-        public InfoForm()
+        public Reportes()
         {
             InitializeComponent();
         }
 
-        private void InfoForm_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            GmapForm formGmap = new GmapForm();
-            formGmap.Show();
+            GmapForm gmapForm = new GmapForm();
+            gmapForm.Show();
             this.Close();
         }
     }

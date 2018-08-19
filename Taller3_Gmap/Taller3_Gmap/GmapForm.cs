@@ -14,7 +14,7 @@ using GMap.NET.WindowsForms.Markers;
 
 namespace Taller3_Gmap
 {
-    public partial class Form1 : Form
+    public partial class GmapForm : Form
     {
         GMarkerGoogle marker;
         GMapOverlay markerOverLay;
@@ -23,7 +23,7 @@ namespace Taller3_Gmap
         int filaSeleccionada = 0;
         double LatitudInicial = 4.692683;
         double LongitudInicial = -74.065076;
-        public Form1()
+        public GmapForm()
         {
             InitializeComponent();
         }
@@ -134,10 +134,25 @@ namespace Taller3_Gmap
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(filaSeleccionada);
+        }        
+
+        private void btnModificarInfo_Click(object sender, EventArgs e)
+        {
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnReportes_Click(object sender, EventArgs e)
         {
+            ReportesForm reporte = new ReportesForm();
+            reporte.Show();
+            this.Hide();
+        }
+
+        private void MostrarInfoBtn_Click(object sender, EventArgs e)
+        {
+            InfoForm informacion = new InfoForm();
+            informacion.Show();
+            this.Hide();
 
         }
     }

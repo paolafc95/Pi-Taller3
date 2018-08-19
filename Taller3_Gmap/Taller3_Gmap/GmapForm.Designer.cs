@@ -1,6 +1,6 @@
 ﻿namespace Taller3_Gmap
 {
-    partial class Form1
+    partial class GmapForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -38,7 +38,7 @@
             this.txtLatitud = new System.Windows.Forms.TextBox();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnModificarInfo = new System.Windows.Forms.Button();
-            this.mostrarInfoBtn = new System.Windows.Forms.Button();
+            this.MostrarInfoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.gMapControl1.LevelsKeepInMemmory = 5;
             this.gMapControl1.Location = new System.Drawing.Point(12, 12);
             this.gMapControl1.MarkersEnabled = true;
-            this.gMapControl1.MaxZoom = 2;
+            this.gMapControl1.MaxZoom = 18;
             this.gMapControl1.MinZoom = 2;
             this.gMapControl1.MouseWheelZoomEnabled = true;
             this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
@@ -69,7 +69,7 @@
             this.gMapControl1.ShowTileGridLines = false;
             this.gMapControl1.Size = new System.Drawing.Size(694, 575);
             this.gMapControl1.TabIndex = 0;
-            this.gMapControl1.Zoom = 0D;
+            this.gMapControl1.Zoom = 2D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
             this.gMapControl1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gMapControl1_MouseDoubleClick);
             // 
@@ -152,6 +152,7 @@
             this.btnReportes.TabIndex = 9;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnModificarInfo
             // 
@@ -162,24 +163,25 @@
             this.btnModificarInfo.TabIndex = 10;
             this.btnModificarInfo.Text = "Modificar información";
             this.btnModificarInfo.UseVisualStyleBackColor = true;
+            this.btnModificarInfo.Click += new System.EventHandler(this.btnModificarInfo_Click);
             // 
-            // mostrarInfoBtn
+            // MostrarInfoBtn
             // 
-            this.mostrarInfoBtn.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mostrarInfoBtn.Location = new System.Drawing.Point(730, 168);
-            this.mostrarInfoBtn.Name = "mostrarInfoBtn";
-            this.mostrarInfoBtn.Size = new System.Drawing.Size(204, 35);
-            this.mostrarInfoBtn.TabIndex = 11;
-            this.mostrarInfoBtn.Text = "Mostrar información";
-            this.mostrarInfoBtn.UseVisualStyleBackColor = true;
-            this.mostrarInfoBtn.Click += new System.EventHandler(this.button3_Click);
+            this.MostrarInfoBtn.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MostrarInfoBtn.Location = new System.Drawing.Point(730, 168);
+            this.MostrarInfoBtn.Name = "MostrarInfoBtn";
+            this.MostrarInfoBtn.Size = new System.Drawing.Size(204, 35);
+            this.MostrarInfoBtn.TabIndex = 11;
+            this.MostrarInfoBtn.Text = "Mostrar información";
+            this.MostrarInfoBtn.UseVisualStyleBackColor = true;
+            this.MostrarInfoBtn.Click += new System.EventHandler(this.MostrarInfoBtn_Click);
             // 
-            // Form1
+            // GmapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 599);
-            this.Controls.Add(this.mostrarInfoBtn);
+            this.Controls.Add(this.MostrarInfoBtn);
             this.Controls.Add(this.btnModificarInfo);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.txtLatitud);
@@ -192,7 +194,8 @@
             this.Controls.Add(this.gMapControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "GmapForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taller3_Gmaps";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -213,7 +216,7 @@
         private System.Windows.Forms.TextBox txtLatitud;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnModificarInfo;
-        private System.Windows.Forms.Button mostrarInfoBtn;
+        private System.Windows.Forms.Button MostrarInfoBtn;
     }
 }
 
