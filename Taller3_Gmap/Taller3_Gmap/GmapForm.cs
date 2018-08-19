@@ -14,18 +14,24 @@ using GMap.NET.WindowsForms.Markers;
 
 namespace Taller3_Gmap
 {
+
+    
     public partial class GmapForm : Form
     {
         GMarkerGoogle marker;
         GMapOverlay markerOverLay;
         DataTable dt;
 
+        private Modelo model;
         int filaSeleccionada = 0;
+      
         double LatitudInicial = 4.692683;
         double LongitudInicial = -74.065076;
         public GmapForm()
         {
             InitializeComponent();
+
+            model = new Modelo();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -46,17 +52,38 @@ namespace Taller3_Gmap
         private void Form1_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
+            dt.Columns.Add(new DataColumn("Código", typeof(Int32)));
             dt.Columns.Add(new DataColumn("Nombre",typeof(string)));
-            dt.Columns.Add(new DataColumn("Lat",typeof(double)));
-            dt.Columns.Add(new DataColumn("Long",typeof(double)));
+            dt.Columns.Add(new DataColumn("Fecha Creación",typeof(string)));
+            dt.Columns.Add(new DataColumn("Departamento",typeof(string)));
+            dt.Columns.Add(new DataColumn("Municipio", typeof(string)));
+            dt.Columns.Add(new DataColumn("Región", typeof(string)));
+            dt.Columns.Add(new DataColumn("Área Conocimiento", typeof(string)));
+            dt.Columns.Add(new DataColumn("Gran área conocimiento", typeof(string)));
+
+
+
 
             //Datos al dt para mostrar en la lista
-            dt.Rows.Add("Grupo 1", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(001,"Grupo 1", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(002, "Grupo 2", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(003, "Grupo 3", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(004, "Grupo 4", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(005, "Grupo 5", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(006, "Grupo 6", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(007, "Grupo 7", LatitudInicial, LongitudInicial);
+            dt.Rows.Add(008, "Grupo 8", LatitudInicial, LongitudInicial);
+
+
             dataGridView1.DataSource = dt;
 
             // desactivar columnas de latitud y longitud
-            dataGridView1.Columns[1].Visible = false;
             dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
 
 
 
@@ -111,14 +138,13 @@ namespace Taller3_Gmap
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
         {
             filaSeleccionada = e.RowIndex; //fila selecionada
-
             //tomamos datos del grid y los asignamos a los textBox
             txtNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
             txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
             txtLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
 
             //Se asignan los valores del grid al marcador
-            marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLong.Text));
+           // marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLong.Text));
             
             //El mapa se posiiona en la ubicación del marcador
             gMapControl1.Position = marker.Position;
@@ -170,7 +196,8 @@ namespace Taller3_Gmap
 
         private void MostrarInfoBtn_Click(object sender, EventArgs e)
         {
-            InfoForm informacion = new InfoForm();
+            filaSeleccionada = dataGridView1.SelectedCells[0].RowIndex;
+            InfoForm informacion = new InfoForm(this,dt,filaSeleccionada);
             informacion.Show();
             this.Hide();
 
