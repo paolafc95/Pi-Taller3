@@ -10,7 +10,7 @@ namespace Taller3_Gmap
     {
         public String temp = "";
         public String temp2 = "";
-        public int[] posDatos = { 3, 2, 4, 6, 5, 8, 11, 12 };
+        public int[] posDatos = { 2, 3, 4, 6, 5, 8, 11, 12 };
         private List<String> grupos  = new List<String>();
         public Modelo()
         {
@@ -18,7 +18,7 @@ namespace Taller3_Gmap
         }
         public void cargarDatos()
         {
-            string[] text = System.IO.File.ReadAllLines(@"./GRUPOS_DE_INV.txt");
+            string[] text = System.IO.File.ReadAllLines(@"./GRUPOS_DE_INVEST.csv");
            
             foreach(var f in text)
             {
