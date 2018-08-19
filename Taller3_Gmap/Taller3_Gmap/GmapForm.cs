@@ -163,7 +163,7 @@ namespace Taller3_Gmap
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            Reportes reporte = new Reportes();
+            ReportesForm reporte = new ReportesForm();
             reporte.Show();
             this.Hide();
         }
