@@ -14,18 +14,23 @@ using GMap.NET.WindowsForms.Markers;
 
 namespace Taller3_Gmap
 {
+
+    
     public partial class GmapForm : Form
     {
         GMarkerGoogle marker;
         GMapOverlay markerOverLay;
         DataTable dt;
 
+        private Modelo model;
         int filaSeleccionada = 0;
         double LatitudInicial = 4.692683;
         double LongitudInicial = -74.065076;
         public GmapForm()
         {
             InitializeComponent();
+
+            model = new Modelo();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
