@@ -14,3 +14,21 @@ C:\Users\Lilian Paola\Documents\UIcesi\Proyecto integradorI\_2018-2\T3_grupoInve
 C:\Users\Lilian Paola\Documents\UIcesi\Proyecto integradorI\_2018-2\T3_grupoInvestigación.gmaps\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.GmapForm.resources
 C:\Users\Lilian Paola\Documents\UIcesi\Proyecto integradorI\_2018-2\T3_grupoInvestigación.gmaps\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.InfoForm.resources
 C:\Users\Lilian Paola\Documents\UIcesi\Proyecto integradorI\_2018-2\T3_grupoInvestigación.gmaps\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.ReportesForm.resources
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\Taller3_Gmap.exe.config
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\Taller3_Gmap.exe
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\Taller3_Gmap.pdb
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\AjaxMin.dll
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\GMap.NET.Core.dll
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\Gmap.net.dll
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\bin\Debug\Gmap.net.pdb
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csprojAssemblyReference.cache
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.GmapForm.resources
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.InfoForm.resources
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.Properties.Resources.resources
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.Reportes.resources
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csproj.GenerateResource.cache
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.csproj.CopyComplete
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.exe
+C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.pdb

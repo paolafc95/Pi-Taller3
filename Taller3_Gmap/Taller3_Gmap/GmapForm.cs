@@ -87,6 +87,26 @@ namespace Taller3_Gmap
         {
 
         }
+        private void PuntosRandom(double coordenadosX,double coordenadasY)
+        {
+            // cree los decimales aleatorios para poner el punto
+            Random aleatorio = new Random();
+            double randomX = (aleatorio.Next(1, 50000))/10000;
+            double randomY = (aleatorio.Next(1, 50000))/10000;
+
+            // elimina decimales de las cordenada de las ciudaded
+
+            double ciudadX = Math.Round(coordenadosX, 1)+ randomX;
+            double ciudadY = Math.Round(coordenadasY, 1)+randomY;
+            
+            //crea el punto aleatorio
+            marker.Position = new PointLatLng(ciudadX, ciudadY);
+            //Se le agrega el tooltip
+            marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
+
+
+
+        }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
         {
