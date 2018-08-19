@@ -11,7 +11,7 @@ namespace Taller3_Gmap
         public String temp = "";
         public String temp2 = "";
         public int[] posDatos = { 3, 2, 4, 6, 5, 8, 11, 12 };
-        public List<String> grupos= new List<String>();
+        private List<String> grupos { get; set; } = new List<String>();
         public Modelo()
         {
             cargarDatos();
