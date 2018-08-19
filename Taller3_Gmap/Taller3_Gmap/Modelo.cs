@@ -18,7 +18,7 @@ namespace Taller3_Gmap
         }
         public void cargarDatos()
         {
-            string[] text = System.IO.File.ReadAllLines(@"./GRUPOS_DE_INVES.csv");
+            string[] text = System.IO.File.ReadAllLines(@"./GRUPOS_DE_INV.txt");
            
             foreach(var f in text)
             {
