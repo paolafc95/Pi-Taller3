@@ -52,17 +52,11 @@ namespace Taller3_Gmap
         private void Form1_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
-<<<<<<< HEAD
-            dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
-            dt.Columns.Add(new DataColumn("Código",typeof(string)));
-            dt.Columns.Add(new DataColumn("Fecha Creación",typeof(string)));
-            dt.Columns.Add(new DataColumn("Departamento",typeof(string)));
-=======
+
             dt.Columns.Add(new DataColumn("Código", typeof(string)));
             dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
             dt.Columns.Add(new DataColumn("Fecha Creación", typeof(string)));
             dt.Columns.Add(new DataColumn("Departamento", typeof(string)));
->>>>>>> 6fd31a8d71eeee7e7822b0327487d1a34dfd331b
             dt.Columns.Add(new DataColumn("Municipio", typeof(string)));
             dt.Columns.Add(new DataColumn("Región", typeof(string)));
             dt.Columns.Add(new DataColumn("Área Conocimiento", typeof(string)));
@@ -151,20 +145,13 @@ namespace Taller3_Gmap
             double ciudadY = Math.Round(gMapControl1.Position.Lng, 1)+randomY;
 
             //crea el punto aleatorio
-<<<<<<< HEAD
             marker.Position = new PointLatLng(ciudadX, ciudadY);
             //Se le agrega el tooltip
             marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
-=======
            
 
             GMarkerGoogle nMarker = new GMarkerGoogle(new PointLatLng(ciudadX, ciudadY),GMarkerGoogleType.green_pushpin);
             markerOverLay.Markers.Add(nMarker);
-           
-
-
-
->>>>>>> 6fd31a8d71eeee7e7822b0327487d1a34dfd331b
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
