@@ -9,12 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
+
 namespace Taller3_Gmap
 {
     public partial class ReportesForm : Form
     {
+        //DataTable dt;
+       
         public ReportesForm()
         {
+            //dt = datos;
             InitializeComponent();
         }
 
@@ -27,18 +31,21 @@ namespace Taller3_Gmap
 
         private void ReportesForm_Load(object sender, EventArgs e)
         {
-
+            //chartRegiones.DataSource = dt;
         }
 
         private void chart1_Click(object sender, EventArgs e)
         {
             
-        }        
+        }
 
         private void infoxRegionesBtn_Click(object sender, EventArgs e)
-        {
-            //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartRegiones.Series["Región"].Points.AddXY("Región 1", 10);            
+        {//mibarChart1.Series[0].Points.Add(Convert.ToInt32(textBoxValor.Text));
+            
+             //falta tomar los valores de cada grupo de investigación para cambiar el número
+             this.chartRegiones.Series["Región"].Points.AddXY("Región 1", 10);
+             
+                                
         }
 
         private void áreaInvesBtn_Click(object sender, EventArgs e)
