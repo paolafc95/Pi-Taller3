@@ -52,14 +52,24 @@ namespace Taller3_Gmap
         private void Form1_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
+<<<<<<< HEAD
             dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
             dt.Columns.Add(new DataColumn("Código",typeof(string)));
             dt.Columns.Add(new DataColumn("Fecha Creación",typeof(string)));
             dt.Columns.Add(new DataColumn("Departamento",typeof(string)));
+=======
+            dt.Columns.Add(new DataColumn("Código", typeof(string)));
+            dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
+            dt.Columns.Add(new DataColumn("Fecha Creación", typeof(string)));
+            dt.Columns.Add(new DataColumn("Departamento", typeof(string)));
+>>>>>>> 6fd31a8d71eeee7e7822b0327487d1a34dfd331b
             dt.Columns.Add(new DataColumn("Municipio", typeof(string)));
             dt.Columns.Add(new DataColumn("Región", typeof(string)));
             dt.Columns.Add(new DataColumn("Área Conocimiento", typeof(string)));
             dt.Columns.Add(new DataColumn("Gran área conocimiento", typeof(string)));
+            dt.Columns.Add(new DataColumn("Latitud", typeof(double)));
+            dt.Columns.Add(new DataColumn("Longitud", typeof(double)));
+
 
             //Datos al dt para mostrar en la lista
 
@@ -67,7 +77,7 @@ namespace Taller3_Gmap
             {
                 String[] dats = g.Split(',');
                 if (!dats[0].Equals("COD_GRUPO_GR"))
-                { 
+                {
                     dt.Rows.Add(dats[0], dats[1], dats[2], dats[3], dats[4], dats[5], dats[6], dats[7]);
                 }
             }
@@ -92,13 +102,15 @@ namespace Taller3_Gmap
             dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
 
 
 
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(LatitudInicial, LongitudInicial);
+            gMapControl1.SetPositionByKeywords("Bogota, Colombia");
             gMapControl1.MinZoom = 0;
             gMapControl1.MaxZoom = 24;
             gMapControl1.Zoom = 6;
@@ -108,6 +120,8 @@ namespace Taller3_Gmap
             markerOverLay = new GMapOverlay("Marcador");
             marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
             markerOverLay.Markers.Add(marker);
+
+            PuntosRandom();
 
             //Se le pone un tooltip de texto a los marcadores
             marker.ToolTipMode = MarkerTooltipMode.Always;
@@ -122,7 +136,7 @@ namespace Taller3_Gmap
         {
 
         }
-        private void PuntosRandom(double coordenadosX,double coordenadasY)
+        private void PuntosRandom()
         {
             // cree los decimales aleatorios para poner el punto
             Random aleatorio = new Random();
@@ -131,13 +145,26 @@ namespace Taller3_Gmap
 
             // elimina decimales de las cordenada de las ciudaded
 
-            double ciudadX = Math.Round(coordenadosX, 1)+ randomX;
-            double ciudadY = Math.Round(coordenadasY, 1)+randomY;
-            
+            gMapControl1.SetPositionByKeywords("Bogota, Colombia");
+      
+            double ciudadX = Math.Round(gMapControl1.Position.Lat, 1)+ randomX;
+            double ciudadY = Math.Round(gMapControl1.Position.Lng, 1)+randomY;
+
             //crea el punto aleatorio
+<<<<<<< HEAD
             marker.Position = new PointLatLng(ciudadX, ciudadY);
             //Se le agrega el tooltip
             marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
+=======
+           
+
+            GMarkerGoogle nMarker = new GMarkerGoogle(new PointLatLng(ciudadX, ciudadY),GMarkerGoogleType.green_pushpin);
+            markerOverLay.Markers.Add(nMarker);
+           
+
+
+
+>>>>>>> 6fd31a8d71eeee7e7822b0327487d1a34dfd331b
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
@@ -177,7 +204,8 @@ namespace Taller3_Gmap
         {
             if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtLatitud.Text) && !string.IsNullOrEmpty(txtLong.Text))
             { 
-            dt.Rows.Add(txtNombre.Text, txtLatitud.Text, txtLong.Text);
+        
+                dt.Rows.Add(txtNombre.Text, txtLatitud.Text, txtLong.Text);
                
             }
         }

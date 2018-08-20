@@ -26,6 +26,10 @@ namespace Taller3_Gmap
         private void InfoForm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
+
+
             dataGridView1.Rows[0].Selected = false;
             dataGridView1.Rows[posBuscada].Selected = true;
             dataGridView1.CurrentCell = dataGridView1.Rows[posBuscada].Cells[0];
