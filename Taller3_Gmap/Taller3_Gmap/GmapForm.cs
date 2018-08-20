@@ -60,6 +60,9 @@ namespace Taller3_Gmap
             dt.Columns.Add(new DataColumn("Región", typeof(string)));
             dt.Columns.Add(new DataColumn("Área Conocimiento", typeof(string)));
             dt.Columns.Add(new DataColumn("Gran área conocimiento", typeof(string)));
+            dt.Columns.Add(new DataColumn("Latitud", typeof(double)));
+            dt.Columns.Add(new DataColumn("Longitud", typeof(double)));
+
 
 
 
@@ -96,6 +99,8 @@ namespace Taller3_Gmap
             dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
 
 
 
@@ -184,7 +189,8 @@ namespace Taller3_Gmap
         {
             if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtLatitud.Text) && !string.IsNullOrEmpty(txtLong.Text))
             { 
-            dt.Rows.Add(txtNombre.Text, txtLatitud.Text, txtLong.Text);
+        
+                dt.Rows.Add(txtNombre.Text, txtLatitud.Text, txtLong.Text);
                
             }
         }
