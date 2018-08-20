@@ -113,7 +113,7 @@ namespace Taller3_Gmap
             //Marcador
             markerOverLay = new GMapOverlay("Marcador");
             marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
-            markerOverLay.Markers.Add(marker);
+           //markerOverLay.Markers.Add(marker);
 
             PuntosRandom();
 
@@ -124,6 +124,7 @@ namespace Taller3_Gmap
             //Agregamos el OverLay y el marcador al mapcontrol
             gMapControl1.Overlays.Add(markerOverLay);
 
+            
         }
 
         private void gMapControl1_Load(object sender, EventArgs e)
@@ -158,8 +159,8 @@ namespace Taller3_Gmap
         {
             filaSeleccionada = e.RowIndex; //fila selecionada
             //tomamos datos del grid y los asignamos a los textBox
-            txtNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
-            txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
+            txtNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
+            txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
             txtLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
 
             //Se asignan los valores del grid al marcador
