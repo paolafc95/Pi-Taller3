@@ -113,16 +113,16 @@ namespace Taller3_Gmap
             gMapControl1.AutoScroll = true;
 
             //Marcador
-            markerOverLay = new GMapOverlay("Marcador");
-            marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
-            markerOverLay.Markers.Add(marker);
+           // markerOverLay = new GMapOverlay("Marcador");
+           // marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
+            //markerOverLay.Markers.Add(marker);
 
             //Se le pone un tooltip de texto a los marcadores
-            marker.ToolTipMode = MarkerTooltipMode.Always;
-            marker.ToolTipText = string.Format("Ubicación: \n Latitud:{0} \nLongitud:{1}", LatitudInicial, LongitudInicial);
+          // marker.ToolTipMode = MarkerTooltipMode.Always;
+          //  marker.ToolTipText = string.Format("Ubicación: \n Latitud:{0} \nLongitud:{1}", LatitudInicial, LongitudInicial);
 
             //Agregamos el OverLay y el marcador al mapcontrol
-            gMapControl1.Overlays.Add(markerOverLay);
+          //  gMapControl1.Overlays.Add(markerOverLay);
 
             
         }
@@ -183,22 +183,21 @@ namespace Taller3_Gmap
         {
             filaSeleccionada = e.RowIndex; //fila selecionada
             //tomamos datos del grid y los asignamos a los textBox
-            txtNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
-            txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
-            txtLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
+            string latitud = dataGridView1.Rows[filaSeleccionada].Cells[8].Value.ToString();
+            string longitud= dataGridView1.Rows[filaSeleccionada].Cells[9].Value.ToString();
 
             //Se asignan los valores del grid al marcador
-           // marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLong.Text));
+           // marker.Position = new PointLatLng(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
             
             //El mapa se posiiona en la ubicación del marcador
-            gMapControl1.Position = marker.Position;
-            gMapControl1.Zoom = 9;
+           // gMapControl1.Position = marker.Position;
+           // gMapControl1.Zoom = 9;
 
         }
 
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //Obtiene los datos de donde el usuario interactuó
+         /*   //Obtiene los datos de donde el usuario interactuó
             double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
             double lng= gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
 
@@ -210,8 +209,8 @@ namespace Taller3_Gmap
             marker.Position = new PointLatLng(lat,lng);
             //Se le agrega el tooltip
             marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",lat, lng);
-        }
-
+        */
+            }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtLatitud.Text) && !string.IsNullOrEmpty(txtLong.Text))
