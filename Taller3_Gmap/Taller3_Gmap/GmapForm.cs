@@ -183,6 +183,10 @@ namespace Taller3_Gmap
         {
             filaSeleccionada = e.RowIndex; //fila selecionada
             //tomamos datos del grid y los asignamos a los textBox
+            txtNombre.Text= dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
+            txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
+            txtLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
+
             string latitud = dataGridView1.Rows[filaSeleccionada].Cells[8].Value.ToString();
             string longitud= dataGridView1.Rows[filaSeleccionada].Cells[9].Value.ToString();
 
@@ -190,8 +194,8 @@ namespace Taller3_Gmap
            // marker.Position = new PointLatLng(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
             
             //El mapa se posiiona en la ubicación del marcador
-           // gMapControl1.Position = marker.Position;
-           // gMapControl1.Zoom = 9;
+            //gMapControl1.Position = marker.Position;
+            //gMapControl1.Zoom = 9;
 
         }
 
