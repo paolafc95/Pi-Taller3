@@ -32,6 +32,8 @@ namespace Taller3_Gmap
             InitializeComponent();
 
             model = new Modelo();
+
+            controladorPuntos();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -113,9 +115,7 @@ namespace Taller3_Gmap
             //Marcador
             markerOverLay = new GMapOverlay("Marcador");
             marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
-           //markerOverLay.Markers.Add(marker);
-
-            PuntosRandom();
+            markerOverLay.Markers.Add(marker);
 
             //Se le pone un tooltip de texto a los marcadores
             marker.ToolTipMode = MarkerTooltipMode.Always;
@@ -131,28 +131,34 @@ namespace Taller3_Gmap
         {
 
         }
-        private void PuntosRandom()
+        private void controladorPuntos()
+        {
+            List<String> ciudades = model.getListaCiudades();
+            foreach(var g in ciudades)
+            {
+                PuntosRandom(g);
+                Console.WriteLine(g);
+            }
+        }
+        private void PuntosRandom(String ciudad)
         {
             // cree los decimales aleatorios para poner el punto
             Random aleatorio = new Random();
-            double randomX = (aleatorio.Next(1, 50000))/10000;
-            double randomY = (aleatorio.Next(1, 50000))/10000;
+            double randomX = (aleatorio.Next(-10000, 20000))/10000;
+            double randomY = (aleatorio.Next(-10000, 20000))/10000;
 
             // elimina decimales de las cordenada de las ciudaded
 
-            gMapControl1.SetPositionByKeywords("Bogota, Colombia");
+            gMapControl1.SetPositionByKeywords(ciudad);
       
             double ciudadX = Math.Round(gMapControl1.Position.Lat, 1)+ randomX;
             double ciudadY = Math.Round(gMapControl1.Position.Lng, 1)+randomY;
 
             //crea el punto aleatorio
-            marker.Position = new PointLatLng(ciudadX, ciudadY);
-            //Se le agrega el tooltip
-            marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
-           
-
+            GMapOverlay punto = new GMapOverlay("marcador");
             GMarkerGoogle nMarker = new GMarkerGoogle(new PointLatLng(ciudadX, ciudadY),GMarkerGoogleType.green_pushpin);
-            markerOverLay.Markers.Add(nMarker);
+            punto.Markers.Add(nMarker);
+            gMapControl1.Overlays.Add(punto);
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
