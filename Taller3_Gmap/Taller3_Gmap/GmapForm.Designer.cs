@@ -76,13 +76,17 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(815, 304);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(201, 270);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SeleccionarRegistro);
@@ -128,6 +132,7 @@
             this.txtLong.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLong.Location = new System.Drawing.Point(812, 127);
             this.txtLong.Name = "txtLong";
+            this.txtLong.ReadOnly = true;
             this.txtLong.Size = new System.Drawing.Size(204, 22);
             this.txtLong.TabIndex = 5;
             // 
@@ -137,6 +142,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(812, 29);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(204, 22);
             this.txtNombre.TabIndex = 6;
             // 
@@ -146,6 +152,7 @@
             this.txtLatitud.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLatitud.Location = new System.Drawing.Point(812, 76);
             this.txtLatitud.Name = "txtLatitud";
+            this.txtLatitud.ReadOnly = true;
             this.txtLatitud.Size = new System.Drawing.Size(204, 22);
             this.txtLatitud.TabIndex = 7;
             this.txtLatitud.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
