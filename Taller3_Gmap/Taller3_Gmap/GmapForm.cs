@@ -133,32 +133,50 @@ namespace Taller3_Gmap
         }
         private void controladorPuntos()
         {
-            List<String> ciudades = model.getListaCiudades();
+            List<String> ciudades = model.getListaGrupos();
+            List<String> longitudes = new List<String>();
+            List<String> latitudes = new List<String>();
             foreach(var g in ciudades)
             {
-                PuntosRandom(g);
-                Console.WriteLine(g);
+                String[] grupo = g.Split(',');
+                String temp = PuntosRandom(grupo[3]);
+                String[] temp1 = temp.Split(',');
+                longitudes.Add(temp1[0]);
+                latitudes.Add(temp1[1]);
+
             }
         }
-        private void PuntosRandom(String ciudad)
+        private String PuntosRandom(String ciudad)
         {
             // cree los decimales aleatorios para poner el punto
             Random aleatorio = new Random();
-            double randomX = (aleatorio.Next(-10000, 20000))/10000;
-            double randomY = (aleatorio.Next(-10000, 20000))/10000;
+            String Srandomx = 0 +",0" +aleatorio.Next(0, 99999).ToString();
+            double randomX = Convert.ToDouble(Srandomx);
+         
+
+            Random aleatorio2 = new Random();
+            String SrandomY = 0 + ",0" + aleatorio.Next(0, 99999).ToString();
+            double randomY = Convert.ToDouble(SrandomY);
+            Console.WriteLine(SrandomY);
+            Console.WriteLine(randomY);
+            
+            
 
             // elimina decimales de las cordenada de las ciudaded
 
             gMapControl1.SetPositionByKeywords(ciudad);
       
-            double ciudadX = Math.Round(gMapControl1.Position.Lat, 1)+ randomX;
-            double ciudadY = Math.Round(gMapControl1.Position.Lng, 1)+randomY;
+            double ciudadX = gMapControl1.Position.Lat + randomX;
+            double ciudadY = gMapControl1.Position.Lng +randomY;
+            String coordenadas =  "" + ciudadX+ "," + ciudadY ;
+        
 
             //crea el punto aleatorio
             GMapOverlay punto = new GMapOverlay("marcador");
             GMarkerGoogle nMarker = new GMarkerGoogle(new PointLatLng(ciudadX, ciudadY),GMarkerGoogleType.green_pushpin);
             punto.Markers.Add(nMarker);
             gMapControl1.Overlays.Add(punto);
+            return coordenadas;
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
