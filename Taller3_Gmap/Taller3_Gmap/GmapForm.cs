@@ -53,9 +53,9 @@ namespace Taller3_Gmap
         {
             dt = new DataTable();
             dt.Columns.Add(new DataColumn("Código", typeof(string)));
-            dt.Columns.Add(new DataColumn("Nombre",typeof(string)));
-            dt.Columns.Add(new DataColumn("Fecha Creación",typeof(string)));
-            dt.Columns.Add(new DataColumn("Departamento",typeof(string)));
+            dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
+            dt.Columns.Add(new DataColumn("Fecha Creación", typeof(string)));
+            dt.Columns.Add(new DataColumn("Departamento", typeof(string)));
             dt.Columns.Add(new DataColumn("Municipio", typeof(string)));
             dt.Columns.Add(new DataColumn("Región", typeof(string)));
             dt.Columns.Add(new DataColumn("Área Conocimiento", typeof(string)));
@@ -74,7 +74,7 @@ namespace Taller3_Gmap
             {
                 String[] dats = g.Split(',');
                 if (!dats[0].Equals("COD_GRUPO_GR"))
-                { 
+                {
                     dt.Rows.Add(dats[0], dats[1], dats[2], dats[3], dats[4], dats[5], dats[6], dats[7]);
                 }
             }
@@ -107,7 +107,7 @@ namespace Taller3_Gmap
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(LatitudInicial, LongitudInicial);
+            gMapControl1.SetPositionByKeywords("Bogota, Colombia");
             gMapControl1.MinZoom = 0;
             gMapControl1.MaxZoom = 24;
             gMapControl1.Zoom = 6;
@@ -117,6 +117,8 @@ namespace Taller3_Gmap
             markerOverLay = new GMapOverlay("Marcador");
             marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
             markerOverLay.Markers.Add(marker);
+
+            PuntosRandom();
 
             //Se le pone un tooltip de texto a los marcadores
             marker.ToolTipMode = MarkerTooltipMode.Always;
@@ -131,7 +133,7 @@ namespace Taller3_Gmap
         {
 
         }
-        private void PuntosRandom(double coordenadosX,double coordenadasY)
+        private void PuntosRandom()
         {
             // cree los decimales aleatorios para poner el punto
             Random aleatorio = new Random();
@@ -140,13 +142,17 @@ namespace Taller3_Gmap
 
             // elimina decimales de las cordenada de las ciudaded
 
-            double ciudadX = Math.Round(coordenadosX, 1)+ randomX;
-            double ciudadY = Math.Round(coordenadasY, 1)+randomY;
-            
+            gMapControl1.SetPositionByKeywords("Bogota, Colombia");
+      
+            double ciudadX = Math.Round(gMapControl1.Position.Lat, 1)+ randomX;
+            double ciudadY = Math.Round(gMapControl1.Position.Lng, 1)+randomY;
+
             //crea el punto aleatorio
-            marker.Position = new PointLatLng(ciudadX, ciudadY);
-            //Se le agrega el tooltip
-            marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
+           
+
+            GMarkerGoogle nMarker = new GMarkerGoogle(new PointLatLng(ciudadX, ciudadY),GMarkerGoogleType.green_pushpin);
+            markerOverLay.Markers.Add(nMarker);
+           
 
 
 
