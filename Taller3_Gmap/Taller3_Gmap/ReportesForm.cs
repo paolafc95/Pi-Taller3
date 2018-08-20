@@ -33,38 +33,41 @@ namespace Taller3_Gmap
         private void chart1_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void btnCargarGráfico_Click(object sender, EventArgs e)
-        {
-            //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartTest.Series["Grupos"].Points.AddXY("Grupo 1", 90);
-            this.chartTest.Series["Grupos"].Points.AddXY("Grupo 2",40);
-            this.chartTest.Series["Grupos"].Points.AddXY("Grupo 3", 52);
-        }
+        }        
 
         private void infoxRegionesBtn_Click(object sender, EventArgs e)
-        {   
+        {
             //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartTest.Series["Región"].Points.AddXY("Region 1", 10);
+            this.chartRegiones.Series["Región"].Points.AddXY("Región 1", 10);            
         }
 
         private void áreaInvesBtn_Click(object sender, EventArgs e)
         {
             //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartTest.Series["Área de investigación"].Points.AddXY("Área investigación 1", 2435);
+            this.chartAreaInv.Series["Área de investigación"].Points.AddXY("Área investigación 1", 567);
         }
 
         private void clasificaciónBtn_Click(object sender, EventArgs e)
         {
             //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartTest.Series["Clasificación"].Points.AddXY("Clasificación 1", 450);
+            this.chartClasificación.Series["Clasificación"].Points.AddXY("Clasificación 1", 450);
+
         }
 
         private void ciudadesBtn_Click(object sender, EventArgs e)
         {
             //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartTest.Series["Ciudades"].Points.AddXY("Ciudad 1", 50);
+            this.chartCiudades.Series["Ciudades"].Points.AddXY("Ciudad 1", 450);
+        }
+
+        private void chartCiudades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartRegiones_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,5 +38,10 @@ namespace Taller3_Gmap
             GMF.Show();
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

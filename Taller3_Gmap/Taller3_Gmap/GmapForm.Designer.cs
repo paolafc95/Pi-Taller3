@@ -67,7 +67,7 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(694, 575);
+            this.gMapControl1.Size = new System.Drawing.Size(776, 566);
             this.gMapControl1.TabIndex = 0;
             this.gMapControl1.Zoom = 2D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
@@ -76,10 +76,11 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(733, 304);
+            this.dataGridView1.Location = new System.Drawing.Point(815, 304);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(201, 270);
@@ -90,9 +91,10 @@
             // 
             this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(730, 30);
+            this.lblNombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(812, 12);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(56, 14);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -100,53 +102,59 @@
             // 
             this.labLat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labLat.AutoSize = true;
-            this.labLat.Location = new System.Drawing.Point(730, 69);
+            this.labLat.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLat.Location = new System.Drawing.Point(812, 59);
             this.labLat.Name = "labLat";
-            this.labLat.Size = new System.Drawing.Size(39, 13);
+            this.labLat.Size = new System.Drawing.Size(51, 14);
             this.labLat.TabIndex = 3;
-            this.labLat.Text = "Latitud";
+            this.labLat.Text = "Código";
             this.labLat.Click += new System.EventHandler(this.label2_Click);
             // 
             // labLong
             // 
             this.labLong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labLong.AutoSize = true;
-            this.labLong.Location = new System.Drawing.Point(730, 108);
+            this.labLong.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLong.Location = new System.Drawing.Point(812, 110);
             this.labLong.Name = "labLong";
-            this.labLong.Size = new System.Drawing.Size(48, 13);
+            this.labLong.Size = new System.Drawing.Size(120, 14);
             this.labLong.TabIndex = 4;
-            this.labLong.Text = "Longitud";
+            this.labLong.Text = "Fecha de creación";
             this.labLong.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtLong
             // 
             this.txtLong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLong.Location = new System.Drawing.Point(730, 124);
+            this.txtLong.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLong.Location = new System.Drawing.Point(812, 127);
             this.txtLong.Name = "txtLong";
-            this.txtLong.Size = new System.Drawing.Size(204, 20);
+            this.txtLong.Size = new System.Drawing.Size(204, 22);
             this.txtLong.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.Location = new System.Drawing.Point(730, 46);
+            this.txtNombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(812, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(204, 20);
+            this.txtNombre.Size = new System.Drawing.Size(204, 22);
             this.txtNombre.TabIndex = 6;
             // 
             // txtLatitud
             // 
             this.txtLatitud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLatitud.Location = new System.Drawing.Point(730, 85);
+            this.txtLatitud.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLatitud.Location = new System.Drawing.Point(812, 76);
             this.txtLatitud.Name = "txtLatitud";
-            this.txtLatitud.Size = new System.Drawing.Size(204, 20);
+            this.txtLatitud.Size = new System.Drawing.Size(204, 22);
             this.txtLatitud.TabIndex = 7;
             this.txtLatitud.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // btnReportes
             // 
+            this.btnReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReportes.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(730, 251);
+            this.btnReportes.Location = new System.Drawing.Point(812, 252);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(204, 34);
             this.btnReportes.TabIndex = 9;
@@ -156,8 +164,9 @@
             // 
             // btnModificarInfo
             // 
+            this.btnModificarInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarInfo.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarInfo.Location = new System.Drawing.Point(730, 209);
+            this.btnModificarInfo.Location = new System.Drawing.Point(812, 210);
             this.btnModificarInfo.Name = "btnModificarInfo";
             this.btnModificarInfo.Size = new System.Drawing.Size(204, 36);
             this.btnModificarInfo.TabIndex = 10;
@@ -167,8 +176,9 @@
             // 
             // MostrarInfoBtn
             // 
+            this.MostrarInfoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MostrarInfoBtn.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MostrarInfoBtn.Location = new System.Drawing.Point(730, 168);
+            this.MostrarInfoBtn.Location = new System.Drawing.Point(812, 169);
             this.MostrarInfoBtn.Name = "MostrarInfoBtn";
             this.MostrarInfoBtn.Size = new System.Drawing.Size(204, 35);
             this.MostrarInfoBtn.TabIndex = 11;
@@ -180,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 599);
+            this.ClientSize = new System.Drawing.Size(1038, 590);
             this.Controls.Add(this.MostrarInfoBtn);
             this.Controls.Add(this.btnModificarInfo);
             this.Controls.Add(this.btnReportes);
@@ -193,10 +203,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gMapControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "GmapForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Taller3_Gmaps";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

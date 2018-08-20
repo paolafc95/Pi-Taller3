@@ -52,8 +52,8 @@ namespace Taller3_Gmap
         private void Form1_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Código", typeof(string)));
-            dt.Columns.Add(new DataColumn("Nombre",typeof(string)));
+            dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
+            dt.Columns.Add(new DataColumn("Código",typeof(string)));
             dt.Columns.Add(new DataColumn("Fecha Creación",typeof(string)));
             dt.Columns.Add(new DataColumn("Departamento",typeof(string)));
             dt.Columns.Add(new DataColumn("Municipio", typeof(string)));
@@ -61,11 +61,7 @@ namespace Taller3_Gmap
             dt.Columns.Add(new DataColumn("Área Conocimiento", typeof(string)));
             dt.Columns.Add(new DataColumn("Gran área conocimiento", typeof(string)));
 
-
-
-
             //Datos al dt para mostrar en la lista
-
 
             foreach (var g in model.getListaGrupos())
             {
@@ -142,9 +138,6 @@ namespace Taller3_Gmap
             marker.Position = new PointLatLng(ciudadX, ciudadY);
             //Se le agrega el tooltip
             marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
-
-
-
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
