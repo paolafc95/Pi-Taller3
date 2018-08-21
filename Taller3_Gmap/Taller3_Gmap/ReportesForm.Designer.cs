@@ -70,7 +70,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(540, 503);
+            this.button1.Location = new System.Drawing.Point(830, 473);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 30);
             this.button1.TabIndex = 0;
@@ -167,9 +167,8 @@
             this.chartAreaInv.Name = "chartAreaInv";
             this.chartAreaInv.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series2.Legend = "Legend1";
-            series2.Name = "Área de investigación";
+            series2.Name = "Ainvestigación";
             this.chartAreaInv.Series.Add(series2);
             this.chartAreaInv.Size = new System.Drawing.Size(513, 390);
             this.chartAreaInv.TabIndex = 1;
@@ -209,11 +208,10 @@
             this.chartCiudades.Name = "chartCiudades";
             this.chartCiudades.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series4.Legend = "Legend1";
             series4.Name = "Ciudades";
             this.chartCiudades.Series.Add(series4);
-            this.chartCiudades.Size = new System.Drawing.Size(517, 386);
+            this.chartCiudades.Size = new System.Drawing.Size(887, 356);
             this.chartCiudades.TabIndex = 3;
             this.chartCiudades.Text = "chart1";
             this.chartCiudades.Click += new System.EventHandler(this.chartCiudades_Click);
@@ -230,7 +228,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 92);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(521, 412);
+            this.tabControl1.Size = new System.Drawing.Size(894, 382);
             this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
@@ -270,7 +268,7 @@
             this.tabPage4.Controls.Add(this.chartCiudades);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(513, 386);
+            this.tabPage4.Size = new System.Drawing.Size(886, 356);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Ciudades";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -279,7 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 545);
+            this.ClientSize = new System.Drawing.Size(919, 515);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clasificaciónBtn);
