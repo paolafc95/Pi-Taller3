@@ -86,3 +86,4 @@ C:\Users\DELL\source\repos\Pi-Taller3\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\D
 C:\Users\DELL\source\repos\Pi-Taller3\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.exe
 C:\Users\DELL\source\repos\Pi-Taller3\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.pdb
 C:\Users\DELL\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.ReportesForm.resources
+C:\Users\10\Source\Repos\Pi-Taller3\Taller3_Gmap\Taller3_Gmap\obj\Debug\Taller3_Gmap.AgregarForm.resources

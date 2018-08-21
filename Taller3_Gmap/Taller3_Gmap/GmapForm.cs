@@ -215,15 +215,6 @@ namespace Taller3_Gmap
             marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",lat, lng);
         */
             }
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtLatitud.Text) && !string.IsNullOrEmpty(txtLong.Text))
-            { 
-        
-                dt.Rows.Add(txtNombre.Text, txtLatitud.Text, txtLong.Text);
-               
-            }
-        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -249,6 +240,17 @@ namespace Taller3_Gmap
             informacion.Show();
             this.Hide();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AgregarForm af = new AgregarForm(this);
+            af.Show();
+        }
+
+        public void agregarGrupo(string[] datos)
+        {
+            dt.Rows.Add(datos[0],datos[1],datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
         }
     }
 }
