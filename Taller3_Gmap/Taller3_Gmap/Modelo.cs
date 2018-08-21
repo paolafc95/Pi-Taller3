@@ -33,6 +33,19 @@ namespace Taller3_Gmap
             }
 
         }
+        public String grupo(String cod)
+        {
+            String grupo = "";
+            foreach (var g in grupos)
+            {
+                String[] gs = g.Split(',');
+                if (gs[0].Equals(cod))
+                {
+                    return g;
+                }
+            }
+            return grupo;
+        }
         public void guardarDatos(String GrupoNuevo, Boolean nuevo)
         {
 

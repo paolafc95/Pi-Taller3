@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarFrom));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarForm));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,6 +59,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -229,7 +230,7 @@
             this.textBox7.Size = new System.Drawing.Size(453, 23);
             this.textBox7.TabIndex = 16;
             // 
-            // ModificarFrom
+            // ModificarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +255,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "ModificarFrom";
+            this.Name = "ModificarForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
