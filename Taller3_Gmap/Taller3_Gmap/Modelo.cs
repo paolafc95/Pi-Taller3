@@ -46,14 +46,14 @@ namespace Taller3_Gmap
             }
             return grupo;
         }
-        public void guardarDatos(String GrupoNuevo, Boolean nuevo)
+        public void guardarDatos(String datosGrupo, Boolean nuevo)
         {
 
             if (nuevo)
             {
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./GRUPOS_DE_INVES.csv", true))
                 {
-                    String[] datosGrupo = GrupoNuevo.Split(',');
+                    
                     file.WriteLine(" , ," + datosGrupo[0] + "," + datosGrupo[1] + "," + datosGrupo[2] + "," + datosGrupo[4] + "," + datosGrupo[3] + ", ," + datosGrupo[5] + ", , ," + datosGrupo[6] + "," + datosGrupo[7] + ", , , ");
                 }
             }
@@ -62,20 +62,20 @@ namespace Taller3_Gmap
                 string[] text = System.IO.File.ReadAllLines(@"./GRUPOS_DE_INVES.csv");
                 string temp3 = "";
                 System.IO.File.WriteAllText(@"./Archivo2", temp3);
-                String[] datosGrupo = GrupoNuevo.Split(',');
+                
                 foreach (var tex in text)
                 {
                     String[] substrings = tex.Split(',');
-                    if (!datosGrupo[1].Equals(substrings[2]))
+                    if (!datosGrupo[0].Equals(substrings[2]))
                     {
-                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./datos.txt", true))
+                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./GRUPOS_DE_INVES.csv", true))
                         {
                             file.WriteLine(tex);
                         }
                     }
                     else
                     {
-                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./datos.txt", true))
+                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./GRUPOS_DE_INVES.csv", true))
                         {
                             file.WriteLine(substrings[0]+","+ substrings[1]+"," + datosGrupo[0] + "," + datosGrupo[1] + "," + datosGrupo[2] + "," + datosGrupo[4] + "," + datosGrupo[3] + ","+ substrings[7]+"," + datosGrupo[5] + ","+ substrings[9]+ ","+ substrings[10]+"," + datosGrupo[6] + "," + datosGrupo[7] + ","+ substrings[13]+","+ substrings[14]+ ","+ substrings[5]);
                         }
