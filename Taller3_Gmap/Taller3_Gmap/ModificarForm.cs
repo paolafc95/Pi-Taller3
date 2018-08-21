@@ -35,5 +35,10 @@ namespace Taller3_Gmap
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

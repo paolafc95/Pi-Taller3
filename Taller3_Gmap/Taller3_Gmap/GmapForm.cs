@@ -221,6 +221,8 @@ namespace Taller3_Gmap
 
         private void btnModificarInfo_Click(object sender, EventArgs e)
         {
+            ModificarForm modificar = new ModificarForm();
+            modificar.Show();
 
         }
 
