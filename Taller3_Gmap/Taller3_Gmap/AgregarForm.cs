@@ -53,7 +53,7 @@ namespace Taller3_Gmap
                 string[] datos = { codigo, nombre, fecha, departamento, municipio, region, areaC, granAC };
                 GMF.agregarGrupo(datos);
 
-                MessageBox.Show("El grupo ha sido agregdo satisfactoriamente", "Agregar grupo",
+                MessageBox.Show("El grupo ha sido agregado satisfactoriamente", "Agregar grupo",
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 this.Close();
