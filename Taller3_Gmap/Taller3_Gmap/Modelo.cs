@@ -9,7 +9,6 @@ namespace Taller3_Gmap
     class Modelo
     {
         public String temp = "";
-        public String temp2 = "";
         public int[] posDatos = { 2, 3, 4, 6, 5, 8, 11, 12 };
         private List<String> grupos  = new List<String>();
         private List<String> gruposCiudad = new List<String>();
@@ -72,28 +71,7 @@ namespace Taller3_Gmap
                 }
             }
         }
-        public void cargarDatosSecundarios()
-        {
-            string[] text = System.IO.File.ReadAllLines(@"./archivo");
-
-
-        }
-        public void guardarDatosSecundarios()
-        {
-            if (temp2.Equals(""))
-            {
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./Archivo2", true))
-                {
-
-                }
-            }
-            else
-            {
-                string[] text = System.IO.File.ReadAllLines(@"./Archivo2");
-                string temp2 = "";
-                System.IO.File.WriteAllText(@"./Archivo2", temp2);
-            }
-        }
+       
         public List<String> getListaGrupos()
         {
             return grupos;

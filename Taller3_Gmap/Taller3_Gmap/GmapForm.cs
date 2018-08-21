@@ -157,9 +157,7 @@ namespace Taller3_Gmap
             Random aleatorio2 = new Random();
             String SrandomY = 0 + ",0" + aleatorio.Next(0, 99999).ToString();
             double randomY = Convert.ToDouble(SrandomY);
-            Console.WriteLine(SrandomY);
-            Console.WriteLine(randomY);
-            
+           
             
 
             // elimina decimales de las cordenada de las ciudaded
