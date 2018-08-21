@@ -251,6 +251,7 @@ namespace Taller3_Gmap
         public void agregarGrupo(string[] datos)
         {
             dt.Rows.Add(datos[0],datos[1],datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
+            model.guardarDatos(datos,true);
         }
     }
 }
