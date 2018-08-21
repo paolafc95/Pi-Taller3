@@ -231,6 +231,9 @@ namespace Taller3_Gmap
         public void modificar(String[] datos)
         {
             model.guardarDatos(datos, false);
+            model = new Modelo();
+            Update();
+
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
