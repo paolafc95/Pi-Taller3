@@ -117,7 +117,7 @@ namespace Taller3_Gmap
             txtNombre.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
             txtLatitud.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
             txtLong.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
-
+            
             //Marcador
             // markerOverLay = new GMapOverlay("Marcador");
             // marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
