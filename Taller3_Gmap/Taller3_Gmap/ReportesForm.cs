@@ -40,10 +40,24 @@ namespace Taller3_Gmap
         }
 
         private void infoxRegionesBtn_Click(object sender, EventArgs e)
-        {//mibarChart1.Series[0].Points.Add(Convert.ToInt32(textBoxValor.Text));
-            
-             //falta tomar los valores de cada grupo de investigación para cambiar el número
-             this.chartRegiones.Series["Región"].Points.AddXY("Región 1", 10);
+        {
+
+            //intento No. 3000
+            String[] Región = {"Centro Oriente", "Caribe", "D.C", "Centro Sur", "Eje Cafetero", "Llano","Pacífico","San Andrés, Providencia y Sta. Catalina" };
+            int[] puntos = {662,712,1837,188,1111,83,617, 10 };
+
+            chartRegiones.Titles.Add("Regiones");
+
+            for (int i = 0; i < Región.Length; i++)
+            {
+                //titulos
+                Series serie = chartRegiones.Series.Add(Región[i]);
+                //cantidades
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+                
+            }
+            infoxRegionesBtn.Enabled = false;
              
                                 
         }
