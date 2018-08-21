@@ -46,14 +46,14 @@ namespace Taller3_Gmap
             }
             return grupo;
         }
-        public void guardarDatos(String GrupoNuevo, Boolean nuevo)
+        public void guardarDatos(String[] GrupoNuevo, Boolean nuevo)
         {
 
             if (nuevo)
             {
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./GRUPOS_DE_INVES.csv", true))
                 {
-                    String[] datosGrupo = GrupoNuevo.Split(',');
+                    String[] datosGrupo = GrupoNuevo;
                     file.WriteLine(" , ," + datosGrupo[0] + "," + datosGrupo[1] + "," + datosGrupo[2] + "," + datosGrupo[4] + "," + datosGrupo[3] + ", ," + datosGrupo[5] + ", , ," + datosGrupo[6] + "," + datosGrupo[7] + ", , , ");
                 }
             }
@@ -62,7 +62,7 @@ namespace Taller3_Gmap
                 string[] text = System.IO.File.ReadAllLines(@"./GRUPOS_DE_INVES.csv");
                 string temp3 = "";
                 System.IO.File.WriteAllText(@"./Archivo2", temp3);
-                String[] datosGrupo = GrupoNuevo.Split(',');
+                String[] datosGrupo = GrupoNuevo;
                 foreach (var tex in text)
                 {
                     String[] substrings = tex.Split(',');
