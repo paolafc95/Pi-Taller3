@@ -217,13 +217,20 @@ namespace Taller3_Gmap
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(filaSeleccionada);
-        }        
+        }
 
         private void btnModificarInfo_Click(object sender, EventArgs e)
         {
-            ModificarForm modificar = new ModificarForm();
-            modificar.Show();
+            String cod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
 
+            ModificarForm modificar = new ModificarForm(this, model.grupo(cod));
+            
+            modificar.Show();
+            this.Hide();
+        }
+        public void modificar(String[] datos)
+        {
+            model.guardarDatos(datos, false);
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
