@@ -221,16 +221,9 @@ namespace Taller3_Gmap
 
         private void btnModificarInfo_Click(object sender, EventArgs e)
         {
-            String cod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-            
-
-            ModificarForm modificar = new ModificarForm(this,model.grupo(cod));
+            ModificarForm modificar = new ModificarForm();
             modificar.Show();
-            this.Hide();
-        }
-        public void modificar(String[] datos)
-        {
-            model.guardarDatos(datos[0],false);
+
         }
 
         private void btnReportes_Click(object sender, EventArgs e)

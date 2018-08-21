@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AgregarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AgregarForm.Designer.cs">
+      <DependentUpon>AgregarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarForm.cs">
       <SubType>Form</SubType>
@@ -94,8 +94,8 @@
     <Compile Include="ReportesForm.Designer.cs">
       <DependentUpon>ReportesForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarForm.resx">
+      <DependentUpon>AgregarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GmapForm.resx">
       <DependentUpon>GmapForm.cs</DependentUpon>
