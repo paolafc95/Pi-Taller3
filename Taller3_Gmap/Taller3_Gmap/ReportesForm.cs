@@ -15,17 +15,17 @@ namespace Taller3_Gmap
     public partial class ReportesForm : Form
     {
         //DataTable dt;
-       
-        public ReportesForm()
+        GmapForm GMF;
+        public ReportesForm(GmapForm gm)
         {
             //dt = datos;
+            GMF = gm;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GmapForm gmapForm = new GmapForm();
-            gmapForm.Show();
+            GMF.Show();
             this.Close();
         }      
 
