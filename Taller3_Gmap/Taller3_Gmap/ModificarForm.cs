@@ -46,11 +46,28 @@ namespace Taller3_Gmap
          
     private void button1_Click(object sender, EventArgs e)
     {
-        GMF.Show();
-            String[] d = { Codigo.Split(',')[0], textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text };
-            GMF.modificar(d);
-        this.Close();
-    }
+
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text)
+                && !string.IsNullOrWhiteSpace(textBox4.Text) && !string.IsNullOrWhiteSpace(textBox5.Text) && !string.IsNullOrWhiteSpace(textBox6.Text)
+                && !string.IsNullOrWhiteSpace(textBox7.Text))
+            {
+
+                String[] d = { Codigo.Split(',')[0], textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text };
+
+                GMF.modificar(d);
+                MessageBox.Show("Información modificada satisfactoriamente", "Modificar Información",
+              MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                this.Close();
+                GMF.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Complete todos los campos.", "Modificar Información",
+               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {

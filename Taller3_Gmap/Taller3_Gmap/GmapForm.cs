@@ -112,19 +112,25 @@ namespace Taller3_Gmap
             gMapControl1.Zoom = 6;
             gMapControl1.AutoScroll = true;
 
+            dataGridView1.Rows[0].Selected = true;
+            dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
+            txtNombre.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
+            txtLatitud.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+            txtLong.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
+            
             //Marcador
-           // markerOverLay = new GMapOverlay("Marcador");
-           // marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
+            // markerOverLay = new GMapOverlay("Marcador");
+            // marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
             //markerOverLay.Markers.Add(marker);
 
             //Se le pone un tooltip de texto a los marcadores
-          // marker.ToolTipMode = MarkerTooltipMode.Always;
-          //  marker.ToolTipText = string.Format("Ubicación: \n Latitud:{0} \nLongitud:{1}", LatitudInicial, LongitudInicial);
+            // marker.ToolTipMode = MarkerTooltipMode.Always;
+            //  marker.ToolTipText = string.Format("Ubicación: \n Latitud:{0} \nLongitud:{1}", LatitudInicial, LongitudInicial);
 
             //Agregamos el OverLay y el marcador al mapcontrol
-          //  gMapControl1.Overlays.Add(markerOverLay);
+            //  gMapControl1.Overlays.Add(markerOverLay);
 
-            
+
         }
 
         private void gMapControl1_Load(object sender, EventArgs e)
@@ -224,13 +230,18 @@ namespace Taller3_Gmap
             String cod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
 
             ModificarForm modificar = new ModificarForm(this, model.grupo(cod));
+            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
             this.Hide();
             modificar.Show();
            
         }
         public void modificar(String[] datos)
         {
+            dt.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
             model.guardarDatos(datos, false);
+            model = new Modelo();
+            Update();
+
         }
 
         private void btnReportes_Click(object sender, EventArgs e)

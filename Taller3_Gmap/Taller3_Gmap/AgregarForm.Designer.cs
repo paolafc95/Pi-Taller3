@@ -255,7 +255,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "AgregarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Grupo de Invstigación";
+            this.Text = "Agregar Grupo de Investigación";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AgregarForm_Load);
             this.ResumeLayout(false);
