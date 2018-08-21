@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.infoxRegionesBtn = new System.Windows.Forms.Button();
             this.áreaInvesBtn = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(830, 473);
+            this.button1.Location = new System.Drawing.Point(830, 480);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 30);
             this.button1.TabIndex = 0;
@@ -137,19 +137,18 @@
             this.chartRegiones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chartRegiones.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRegiones.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chartRegiones.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartRegiones.Legends.Add(legend5);
             this.chartRegiones.Location = new System.Drawing.Point(0, 0);
             this.chartRegiones.Name = "chartRegiones";
             this.chartRegiones.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "Región";
-            this.chartRegiones.Series.Add(series1);
-            this.chartRegiones.Size = new System.Drawing.Size(513, 386);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Región";
+            this.chartRegiones.Series.Add(series5);
+            this.chartRegiones.Size = new System.Drawing.Size(886, 356);
             this.chartRegiones.TabIndex = 0;
             this.chartRegiones.Text = "chart1";
             this.chartRegiones.Click += new System.EventHandler(this.chartRegiones_Click);
@@ -159,18 +158,18 @@
             this.chartAreaInv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chartAreaInv.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartAreaInv.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chartAreaInv.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartAreaInv.Legends.Add(legend6);
             this.chartAreaInv.Location = new System.Drawing.Point(0, 0);
             this.chartAreaInv.Name = "chartAreaInv";
             this.chartAreaInv.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Ainvestigación";
-            this.chartAreaInv.Series.Add(series2);
-            this.chartAreaInv.Size = new System.Drawing.Size(513, 390);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Ainvestigación";
+            this.chartAreaInv.Series.Add(series6);
+            this.chartAreaInv.Size = new System.Drawing.Size(886, 360);
             this.chartAreaInv.TabIndex = 1;
             this.chartAreaInv.Text = "chart1";
             // 
@@ -179,19 +178,18 @@
             this.chartClasificación.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartClasificación.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartClasificación.Legends.Add(legend3);
+            chartArea7.Name = "ChartArea1";
+            this.chartClasificación.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartClasificación.Legends.Add(legend7);
             this.chartClasificación.Location = new System.Drawing.Point(0, 0);
             this.chartClasificación.Name = "chartClasificación";
             this.chartClasificación.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.Legend = "Legend1";
-            series3.Name = "Clasificación";
-            this.chartClasificación.Series.Add(series3);
-            this.chartClasificación.Size = new System.Drawing.Size(517, 386);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Clasificación";
+            this.chartClasificación.Series.Add(series7);
+            this.chartClasificación.Size = new System.Drawing.Size(890, 356);
             this.chartClasificación.TabIndex = 2;
             this.chartClasificación.Text = "chart1";
             // 
@@ -200,17 +198,17 @@
             this.chartCiudades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.Name = "ChartArea1";
-            this.chartCiudades.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartCiudades.Legends.Add(legend4);
+            chartArea8.Name = "ChartArea1";
+            this.chartCiudades.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartCiudades.Legends.Add(legend8);
             this.chartCiudades.Location = new System.Drawing.Point(-4, 0);
             this.chartCiudades.Name = "chartCiudades";
             this.chartCiudades.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Ciudades";
-            this.chartCiudades.Series.Add(series4);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Ciudades";
+            this.chartCiudades.Series.Add(series8);
             this.chartCiudades.Size = new System.Drawing.Size(887, 356);
             this.chartCiudades.TabIndex = 3;
             this.chartCiudades.Text = "chart1";
@@ -237,7 +235,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(513, 386);
+            this.tabPage1.Size = new System.Drawing.Size(886, 356);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Regiones";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -248,7 +246,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(513, 386);
+            this.tabPage2.Size = new System.Drawing.Size(886, 356);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Área de investigación";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -258,7 +256,7 @@
             this.tabPage3.Controls.Add(this.chartClasificación);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(513, 386);
+            this.tabPage3.Size = new System.Drawing.Size(886, 356);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Clasificación";
             this.tabPage3.UseVisualStyleBackColor = true;

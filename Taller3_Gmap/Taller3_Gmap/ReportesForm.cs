@@ -64,29 +64,42 @@ namespace Taller3_Gmap
 
         private void áreaInvesBtn_Click(object sender, EventArgs e)
         {
-            String[] Ainvestigación = { "", "Caribe", "D.C", "Centro Sur", "Eje Cafetero", "Llano", "Pacífico", "San Andrés, Providencia y Sta. Catalina" };
-            int[] puntos = { 662, 712, 1837, 188, 1111, 83, 617, 10 };
+            String[] Ainvestigación = { "Ciencias agrícolas", "Ciencias médicas y de la salud", "Ciencias naturales", "Ciencias sociales", "Humanidades","Ingeniería y tecnología" };
+            int[] puntos = { 271,884,981,1648,443,988 };
 
-            chartRegiones.Titles.Add("Regiones");
+            chartAreaInv.Titles.Add("Área de investigación");
 
             for (int i = 0; i < Ainvestigación.Length; i++)
             {
                 //titulos
-                Series serie = chartRegiones.Series.Add(Ainvestigación[i]);
+                Series serie = chartAreaInv.Series.Add(Ainvestigación[i]);
                 //cantidades
                 serie.Label = puntos[i].ToString();
                 serie.Points.Add(puntos[i]);
 
             }
-            infoxRegionesBtn.Enabled = false;
+            áreaInvesBtn.Enabled = false;
 
 
         }
 
         private void clasificaciónBtn_Click(object sender, EventArgs e)
         {
-            //falta tomar los valores de cada grupo de investigación para cambiar el número
-            this.chartClasificación.Series["Clasificación"].Points.AddXY("Clasificación 1", 450);
+            String[] clasificacioin = { "A", "A1", "B", "C", "Reconocido" };
+            int[] puntos = { 762, 524, 1168, 2113, 641 };
+
+            chartClasificación.Titles.Add("Clásificación obtenida");
+
+            for (int i = 0; i < clasificacioin.Length; i++)
+            {
+                //titulos
+                Series serie = chartClasificación.Series.Add(clasificacioin[i]);
+                //cantidades
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+
+            }
+            clasificaciónBtn.Enabled = false;
 
         }
 
