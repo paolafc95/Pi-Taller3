@@ -44,17 +44,18 @@ namespace Taller3_Gmap
 
         }
          
-        private void button2_Click(object sender, EventArgs e)
-    {
-        GMF.Show();
-        this.Close();
-    }
     private void button1_Click(object sender, EventArgs e)
     {
         GMF.Show();
-        String[] d = { Codigo.Split(',')[0], textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text }
+            String[] d = { Codigo.Split(',')[0], textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text };
             GMF.modificar(d);
         this.Close();
     }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            GMF.Show();
+            this.Close();
+        }
     }
 }

@@ -224,9 +224,9 @@ namespace Taller3_Gmap
             String cod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
 
             ModificarForm modificar = new ModificarForm(this, model.grupo(cod));
-            
-            modificar.Show();
             this.Hide();
+            modificar.Show();
+           
         }
         public void modificar(String[] datos)
         {
