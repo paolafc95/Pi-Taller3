@@ -12,6 +12,7 @@ namespace Taller3_Gmap
         public String temp2 = "";
         public int[] posDatos = { 2, 3, 4, 6, 5, 8, 11, 12 };
         private List<String> grupos  = new List<String>();
+        private List<String> gruposCiudad = new List<String>();
         public Modelo()
         {
             cargarDatos();
@@ -24,6 +25,7 @@ namespace Taller3_Gmap
             {
                 string[] text2 = f.Split(',');
                 String grupo ="";
+                gruposCiudad.Add(text2[6]);
                 foreach (var g in posDatos)
                 {
                     grupo += text2[g]+",";
@@ -95,6 +97,10 @@ namespace Taller3_Gmap
         public List<String> getListaGrupos()
         {
             return grupos;
+        }
+        public List<String> getListaCiudades()
+        {
+            return gruposCiudad;
         }
     }
 }

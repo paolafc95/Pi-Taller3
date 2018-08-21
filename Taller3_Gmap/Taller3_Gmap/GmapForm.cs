@@ -32,6 +32,8 @@ namespace Taller3_Gmap
             InitializeComponent();
 
             model = new Modelo();
+
+            controladorPuntos();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -111,18 +113,16 @@ namespace Taller3_Gmap
             gMapControl1.AutoScroll = true;
 
             //Marcador
-            markerOverLay = new GMapOverlay("Marcador");
-            marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
-           //markerOverLay.Markers.Add(marker);
-
-            PuntosRandom();
+           // markerOverLay = new GMapOverlay("Marcador");
+           // marker = new GMarkerGoogle(new PointLatLng(LatitudInicial, LongitudInicial), GMarkerGoogleType.blue_small);
+            //markerOverLay.Markers.Add(marker);
 
             //Se le pone un tooltip de texto a los marcadores
-            marker.ToolTipMode = MarkerTooltipMode.Always;
-            marker.ToolTipText = string.Format("Ubicación: \n Latitud:{0} \nLongitud:{1}", LatitudInicial, LongitudInicial);
+          // marker.ToolTipMode = MarkerTooltipMode.Always;
+          //  marker.ToolTipText = string.Format("Ubicación: \n Latitud:{0} \nLongitud:{1}", LatitudInicial, LongitudInicial);
 
             //Agregamos el OverLay y el marcador al mapcontrol
-            gMapControl1.Overlays.Add(markerOverLay);
+          //  gMapControl1.Overlays.Add(markerOverLay);
 
             
         }
@@ -131,50 +131,77 @@ namespace Taller3_Gmap
         {
 
         }
-        private void PuntosRandom()
+        private void controladorPuntos()
+        {
+            List<String> ciudades = model.getListaGrupos();
+            List<String> longitudes = new List<String>();
+            List<String> latitudes = new List<String>();
+            foreach(var g in ciudades)
+            {
+                String[] grupo = g.Split(',');
+                String temp = PuntosRandom(grupo[3]);
+                String[] temp1 = temp.Split(',');
+                longitudes.Add(temp1[0]);
+                latitudes.Add(temp1[1]);
+
+            }
+        }
+        private String PuntosRandom(String ciudad)
         {
             // cree los decimales aleatorios para poner el punto
             Random aleatorio = new Random();
-            double randomX = (aleatorio.Next(1, 50000))/10000;
-            double randomY = (aleatorio.Next(1, 50000))/10000;
+            String Srandomx = 0 +",0" +aleatorio.Next(0, 99999).ToString();
+            double randomX = Convert.ToDouble(Srandomx);
+         
+
+            Random aleatorio2 = new Random();
+            String SrandomY = 0 + ",0" + aleatorio.Next(0, 99999).ToString();
+            double randomY = Convert.ToDouble(SrandomY);
+            Console.WriteLine(SrandomY);
+            Console.WriteLine(randomY);
+            
+            
 
             // elimina decimales de las cordenada de las ciudaded
 
-            gMapControl1.SetPositionByKeywords("Bogota, Colombia");
+            gMapControl1.SetPositionByKeywords(ciudad);
       
-            double ciudadX = Math.Round(gMapControl1.Position.Lat, 1)+ randomX;
-            double ciudadY = Math.Round(gMapControl1.Position.Lng, 1)+randomY;
+            double ciudadX = gMapControl1.Position.Lat + randomX;
+            double ciudadY = gMapControl1.Position.Lng +randomY;
+            String coordenadas =  "" + ciudadX+ "," + ciudadY ;
+        
 
             //crea el punto aleatorio
-            marker.Position = new PointLatLng(ciudadX, ciudadY);
-            //Se le agrega el tooltip
-            marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",ciudadX, ciudadY);
-           
-
+            GMapOverlay punto = new GMapOverlay("marcador");
             GMarkerGoogle nMarker = new GMarkerGoogle(new PointLatLng(ciudadX, ciudadY),GMarkerGoogleType.green_pushpin);
-            markerOverLay.Markers.Add(nMarker);
+            punto.Markers.Add(nMarker);
+            gMapControl1.Overlays.Add(punto);
+            return coordenadas;
         }
 
         private void SeleccionarRegistro(object sender, DataGridViewCellEventArgs e)
         {
             filaSeleccionada = e.RowIndex; //fila selecionada
             //tomamos datos del grid y los asignamos a los textBox
-            txtNombre.Text = dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
+            txtNombre.Text= dataGridView1.Rows[filaSeleccionada].Cells[1].Value.ToString();
             txtLatitud.Text= dataGridView1.Rows[filaSeleccionada].Cells[0].Value.ToString();
             txtLong.Text= dataGridView1.Rows[filaSeleccionada].Cells[2].Value.ToString();
 
+            string latitud = dataGridView1.Rows[filaSeleccionada].Cells[8].Value.ToString();
+            string longitud= dataGridView1.Rows[filaSeleccionada].Cells[9].Value.ToString();
+
             //Se asignan los valores del grid al marcador
-           // marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLong.Text));
+           // marker.Position = new PointLatLng(Convert.ToDouble(latitud), Convert.ToDouble(longitud));
             
             //El mapa se posiiona en la ubicación del marcador
-            gMapControl1.Position = marker.Position;
-            gMapControl1.Zoom = 9;
+            //gMapControl1.Position = marker.Position;
+            //gMapControl1.Zoom = 9;
 
         }
 
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //Obtiene los datos de donde el usuario interactuó
+         /*   //Obtiene los datos de donde el usuario interactuó
             double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
             double lng= gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
 
@@ -186,8 +213,8 @@ namespace Taller3_Gmap
             marker.Position = new PointLatLng(lat,lng);
             //Se le agrega el tooltip
             marker.ToolTipText = string.Format("Ubicación; \n Latitud: {0}\n Longitud:{1}",lat, lng);
-        }
-
+        */
+            }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtLatitud.Text) && !string.IsNullOrEmpty(txtLong.Text))
